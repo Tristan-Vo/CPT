@@ -43,7 +43,7 @@ public class LibraryCat {
                     
                     break;
                 case 6:
-
+                    System.out.println("Goodbye!");
                     run = false;
                     break;
                 default:
@@ -61,6 +61,18 @@ class Item {
 
 class Book extends Item {
 
+}
+
+class User {
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
 
 class Library {
