@@ -5,11 +5,10 @@
  */
 
  import java.util.Scanner;
- import java.util.Queue;
 
 public class LibraryCat {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         Library library = new Library("Hazel McCallion Central Library");
         boolean run = true;
 
@@ -23,24 +22,24 @@ public class LibraryCat {
             System.out.println("6. Exit");
             System.out.print("Select an option: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = input.nextInt();
+            input.nextLine();
 
             switch (choice) {
                 case 1:
                     library.viewCatalogue();
                     break;
                 case 2:
-                    
+                    library.borrowBook();
                     break;
                 case 3:
-                    
+                    library.returnBook();
                     break;
                 case 4:
-                    
+                    library.viewUsers();
                     break;
                 case 5:
-                    
+                    library.searchBook();
                     break;
                 case 6:
                     System.out.println("Goodbye!");
@@ -52,59 +51,7 @@ public class LibraryCat {
             }
         }
 
-    }
-}
-
-class Item {
-
-}
-
-class Book extends Item {
-
-}
-
-class User {
-    private String name;
-
-    public User(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-
-class Library {
-    private String name;
-
-    public Library(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
-
-    // Methods for actions in the library
-    public void viewCatalogue() {
-
-    }
-
-    public void borrowBook() {
-
-    }
-
-    public void returnBook() {
-
-    }
-
-    public void viewUsers() {
-
-    }
-
-    public void searchBook() {
+        input.close();
 
     }
 }
-
-
