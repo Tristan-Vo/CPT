@@ -1,15 +1,18 @@
-# This is the title of the README (The app name)
+# Library Catalogue
+
 Description of the project maybe?
+
+# Feautures
 
 1. List of Things
 1. Another one
 1. Another one
 
+# How to run the program
 - Bullet points
 - more of them
 
-```java
-public static void main(String[] args) {
-    System.out.println("Hello world")
-}
-```
+# Issues or limitations
+
+# Credits
+- Tristan Vo (https://github.com/Tristan-Vo)
