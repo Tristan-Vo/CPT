@@ -35,5 +35,14 @@ public class BookCatalogue {
         }
     }
 
+    public Book searchBook(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
 
 }

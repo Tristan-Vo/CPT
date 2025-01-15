@@ -30,16 +30,16 @@ public class LibraryCat {
                     library.viewCatalogue();
                     break;
                 case 2:
-                    library.borrowBook();
+                    library.borrowBook(input);
                     break;
                 case 3:
-                    library.returnBook();
+                    library.returnBook(input);
                     break;
                 case 4:
                     library.viewUsers();
                     break;
                 case 5:
-                    library.searchBook();
+                    library.searchBook(input);
                     break;
                 case 6:
                     System.out.println("Goodbye!");
