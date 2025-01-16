@@ -29,7 +29,6 @@ public class Item {
      * Constructor
      * @param title - title of the item
      * @param author - author of the item
-     * @param borrowed - boolean to check if the item is borrowed
      */
     public Item(String title, String author) {
         this.title = title;
@@ -63,7 +62,6 @@ public class Item {
 
     /**
      * Borrows the item by setting borrowed to true
-     * @return void
      */
     public void borrowItem() {
         this.borrowed = true;
@@ -71,7 +69,6 @@ public class Item {
 
     /**
      * Returns the item by setting borrowed to false
-     * @return void
      */
     public void returnItem() {
         this.borrowed = false;

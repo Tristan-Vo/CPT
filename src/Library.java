@@ -49,12 +49,12 @@ public class Library {
      */
     public void borrowBook(Scanner input) {
         // Add user to queue
-        System.out.println("Enter your name: ");
+        System.out.print("Enter your name: ");
         String username = input.nextLine();
         User user = new User(username);
         usersQueue.add(user);
 
-        System.out.println("Enter the title of the book you want to borrow: ");
+        System.out.print("Enter the title of the book you want to borrow: ");
         String title = input.nextLine();
 
         // Search for book if availible, borrow it, and if not return error message
@@ -67,13 +67,12 @@ public class Library {
         }
     }
 
-
     /**
      * Return a book
      * @param input - Scanner object
      */
     public void returnBook(Scanner input) {
-        System.out.println("Enter the title of the book you want to return:");
+        System.out.print("Enter the title of the book you want to return:");
         String title = input.nextLine();
 
         // Search for book and return status
@@ -87,8 +86,16 @@ public class Library {
         }
     }
 
-    public void viewUsers() {
-
+    /**
+     * Process users in queue
+     */
+    public void processUsers(Scanner input) {
+        if (usersQueue.isEmpty()) {
+            System.out.println("No users in queue.");
+        } else {
+            User user = usersQueue.poll();
+            System.out.println("Processing user: " + user.getName());
+        }
     }
 
     /**
@@ -96,7 +103,7 @@ public class Library {
      * @param input - Scanner object
      */
     public void searchBook(Scanner input) {
-        System.out.println("Enter the title of the book you want to search: ");
+        System.out.print("Enter the title of the book you want to search: ");
         String title = input.nextLine();
 
         // Search for book and return status
@@ -107,6 +114,20 @@ public class Library {
         } else {
             System.out.println("Book not found.");
         }
+    }
+
+    /**
+     * Add a book to the catalogue
+     * @param input - Scanner object
+     */
+    public void addBook(Scanner input) {
+        System.out.print("Enter the title of the book you want to add: ");
+        String title = input.nextLine();
+        System.out.print("Enter the author of the book: ");
+        String author = input.nextLine();
+
+        // Add book to catalogue
+        catalogue.addBook(title, author);
     }
 }
 

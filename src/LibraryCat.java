@@ -17,9 +17,10 @@ public class LibraryCat {
             System.out.println("1. View Catalogue");
             System.out.println("2. Borrow a book");
             System.out.println("3. Return a book");
-            System.out.println("4. View Users");
+            System.out.println("4. Process users");
             System.out.println("5. Search for a book");
-            System.out.println("6. Exit");
+            System.out.println("6. Add a book");
+            System.out.println("7. Exit");
             System.out.print("Select an option: ");
 
             int choice = input.nextInt();
@@ -36,12 +37,15 @@ public class LibraryCat {
                     library.returnBook(input);
                     break;
                 case 4:
-                    library.viewUsers();
+                    library.processUsers(input);
                     break;
                 case 5:
                     library.searchBook(input);
                     break;
                 case 6:
+                    library.addBook(input);
+                    break;
+                case 7:
                     System.out.println("Goodbye!");
                     run = false;
                     break;
