@@ -50,7 +50,7 @@ public class Library {
     public void borrowBook(Scanner input) {
         // Add user to queue
         System.out.print("Enter your name: ");
-        String username = input.nextLine(); //
+        String username = input.nextLine();
 
         System.out.print("Enter the title of the book you want to borrow: ");
         String title = input.nextLine();
