@@ -1,13 +1,46 @@
+/**
+ * @author: Tristan Vo
+ * date: 01/09/2025
+ * Library Catalogue BookCatalogue Test Cases
+ */
+
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
 public class BookCatalogueTest {
     @Test
-    void testGetBooks() {
+    public void testGetBooks() {
+
+        // Arrange
+        BookCatalogue catalogue = new BookCatalogue();
+        List<Book> actual = new ArrayList<>();
+        actual.add(new Book("The Great Gatsby", "F. Scott Fitzgerald"));
+        actual.add(new Book("The Lord of the Rings", "J.R.R. Tolkien"));
+        actual.add(new Book("To Kill a Mockingbird", "Harper Lee"));
+        actual.add(new Book("Diary of a Wimpy Kid: Dog Days", "Jeff Kinney"));
+        
+
+        // Act
+        List<Book> expected = catalogue.getBooks();
+
+        // Assert
+        assertEquals(expected, actual);
 
     }
 
     @Test
     void testSearchBook() {
+        // Arrange
+        BookCatalogue catalogue = new BookCatalogue();
+        
+
+        // Act
+        Book actual = catalogue.searchBook("The Great Gatsby");
+        Book expected = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+        // Assert
+        assertEquals(expected, actual);
 
     }
 }

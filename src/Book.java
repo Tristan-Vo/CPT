@@ -27,5 +27,4 @@ public class Book extends Item {
     public String toString(){
         return getTitle() + " by " + getAuthor();
     }
-
 }
