@@ -36,11 +36,11 @@ public class BookCatalogueTest {
     void testSearchBook() {
         // Arrange
         BookCatalogue catalogue = new BookCatalogue();
-        
+        Book actual = catalogue.searchBook("The Great Gatsby");
 
         // Act
-        Book actual = catalogue.searchBook("The Great Gatsby");
-        Book expected = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+
+        Book expected = "The Great Gatsby";
         // Assert
         assertEquals(expected, actual);
 

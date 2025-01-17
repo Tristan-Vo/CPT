@@ -80,6 +80,6 @@ public class Item {
      */
     @Override
     public String toString() {
-        return title;
+        return title + " by " + author;
     }
 }
