@@ -51,8 +51,6 @@ public class Library {
         // Add user to queue
         System.out.print("Enter your name: ");
         String username = input.nextLine();
-        User user = new User(username);
-        usersQueue.add(user);
 
         System.out.print("Enter the title of the book you want to borrow: ");
         String title = input.nextLine();
@@ -61,6 +59,8 @@ public class Library {
         Book book = catalogue.searchBook(title);
         if (book != null && book.isBorrowed() == false) {
             book.borrowItem();
+            User user = new User(username);
+            usersQueue.add(user);
             System.out.println(user.getName() + " borrowed " + title);
         } else {
             System.out.println("Book not availible or already borrowed.");
