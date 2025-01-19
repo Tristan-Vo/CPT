@@ -23,4 +23,4 @@ To run the Library Catalogue, follow these steps:
 - The system processess users in a queue but does not track detailed borrowing histories per user.
 
 # Credits
-- Tristan Vo (https://github.com/Tristan-Vo)
+- [Tristan Vo](https://github.com/Tristan-Vo)
