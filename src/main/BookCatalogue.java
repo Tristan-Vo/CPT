@@ -36,6 +36,7 @@ public class BookCatalogue {
         books.add(new Book("The Catcher in the Rye", "J.D. Salinger"));
         books.add(new Book("The Hobbit", "J.R.R. Tolkien"));
         books.add(new Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling"));
+        books.add(new Book("The Seven Husbands of Evelyn Huga", "Taylor Jenkins Reid"));
     }
 
     /**

@@ -37,6 +37,8 @@ public class BookCatalogueTest {
         expected.add(new Book("The Catcher in the Rye", "J.D. Salinger"));
         expected.add(new Book("The Hobbit", "J.R.R. Tolkien"));
         expected.add(new Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling"));
+        expected.add(new Book("The Seven Husbands of Evelyn Huga", "Taylor Jenkins Reid"));
+
 
         Assertions.assertEquals(expected.size(), actual.size());
         for (int i = 0; i < expected.size(); i++) {
